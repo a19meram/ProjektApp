@@ -51,6 +51,7 @@ public class SecondActivity extends AppCompatActivity {
 
         stadioArrayList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this,R.layout.item_list_textview, R.id.item_list_textview, stadioArrayList);
+        new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=a19meram");
         ListView my_listview = (ListView) findViewById(R.id.my_listview);
         my_listview.setAdapter(adapter);
         Snackbar make = Snackbar.make(my_listview, "Hela vägen ", LENGTH_INDEFINITE);
