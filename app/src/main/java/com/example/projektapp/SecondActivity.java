@@ -27,5 +27,9 @@ public class SecondActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        stadioArrayList = new ArrayList<>();
+        adapter = new ArrayAdapter<>(this,R.layout.item_list_textview, R.id.item_list_textview, stadioArrayList);
+
     }
 }
