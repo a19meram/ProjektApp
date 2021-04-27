@@ -4,9 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class SecondActivity extends AppCompatActivity {
+
+
+    private ArrayList<Stadio> stadioArrayList = new ArrayList<>();
+    private ArrayAdapter<Stadio> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
