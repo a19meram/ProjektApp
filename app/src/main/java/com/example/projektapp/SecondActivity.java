@@ -4,10 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+
+import static com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_INDEFINITE;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -30,6 +37,20 @@ public class SecondActivity extends AppCompatActivity {
 
         stadioArrayList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this,R.layout.item_list_textview, R.id.item_list_textview, stadioArrayList);
-
+        ListView my_listview = (ListView) findViewById(R.id.my_listview);
+        my_listview.setAdapter(adapter);
+        Snackbar make = Snackbar.make(my_listview, "Hela vägen ", LENGTH_INDEFINITE);
+        make.setAction("Open Toast", new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Toast.makeText(SecondActivity.this, "meddelande", Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        });
+        make.show();
     }
 }
