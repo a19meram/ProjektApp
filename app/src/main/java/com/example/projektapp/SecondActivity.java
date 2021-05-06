@@ -63,9 +63,10 @@ public class SecondActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String name = stadioArrayList.get(position).getName("name");
                         String location = stadioArrayList.get(position).getLocation("Location");
+                        String company = stadioArrayList.get(position).getLocation("company");
                         int size = stadioArrayList.get(position).getSize("size");
 
-                        String meddelande = name + " is located in " + location + " and have a size of " + size + " meter.";
+                        String meddelande = name + " is located in " + location + " with a size of " + size + " meters and owned by " + company;
 
                         Toast.makeText(SecondActivity.this, meddelande, Toast.LENGTH_LONG).show();
                     }
@@ -125,10 +126,11 @@ public class SecondActivity extends AppCompatActivity {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
                     String name = jsonObject.getString("name");
                     String location = jsonObject.getString("location");
+                    String company = jsonObject.getString("company");
                     int size = jsonObject.getInt("size");
 
 
-                    stadioArrayList.add(new Stadio(name, size, location));
+                    stadioArrayList.add(new Stadio(name, size, location, company));
                 }
                 adapter.notifyDataSetChanged();
             } catch (JSONException e) {
