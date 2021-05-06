@@ -61,7 +61,13 @@ public class SecondActivity extends AppCompatActivity {
                 my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Toast.makeText(SecondActivity.this, "meddelande", Toast.LENGTH_LONG).show();
+                        String name = stadioArrayList.get(position).getName("name");
+                        String location = stadioArrayList.get(position).getLocation("Location");
+                        int size = stadioArrayList.get(position).getSize("size");
+
+                        String meddelande = name + " is located in " + location + " and have a size of " + size + " meter.";
+
+                        Toast.makeText(SecondActivity.this, meddelande, Toast.LENGTH_LONG).show();
                     }
                 });
             }
