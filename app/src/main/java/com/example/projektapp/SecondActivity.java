@@ -54,7 +54,7 @@ public class SecondActivity extends AppCompatActivity {
         new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=a19meram");
         ListView my_listview = (ListView) findViewById(R.id.my_listview);
         my_listview.setAdapter(adapter);
-        Snackbar make = Snackbar.make(my_listview, "Hela vägen ", LENGTH_INDEFINITE);
+        Snackbar make = Snackbar.make(my_listview, "OPEN---------------------------->", LENGTH_INDEFINITE);
         make.setAction("Open Toast", new View.OnClickListener() {
             @Override
             public void onClick(View view) {

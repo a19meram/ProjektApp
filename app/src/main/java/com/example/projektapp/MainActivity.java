@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         about_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Detta sida har målgruppen...", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Appen finns för att informera om olika arena som finns runt världen. Där information om storleken, plats och namn tillkommer för att användaren ska kunna få tillräckligt med info.", Toast.LENGTH_LONG).show();
             }
         });
     }
