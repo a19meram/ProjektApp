@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#0072FA</color>
     <color name="background">#22211D</color>
+    <drawable name="Highlight">#0BDD14</drawable>
 </resources>

@@ -69,6 +69,7 @@ public class SecondActivity extends AppCompatActivity {
                         String meddelande = name + " is located in " + location + " with a size of " + size + " meters and owned by " + company;
 
                         Toast.makeText(SecondActivity.this, meddelande, Toast.LENGTH_LONG).show();
+                        view.setSelected(true);
                     }
                 });
             }
