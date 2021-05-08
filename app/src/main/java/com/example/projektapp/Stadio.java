@@ -19,8 +19,8 @@ public class Stadio {
 
     }
 
-    public String getCompany() {
-        return company;
+    public String getCompany(String company) {
+        return this.company;
     }
 
     public String getName(String name) {

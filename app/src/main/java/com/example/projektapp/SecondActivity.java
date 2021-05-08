@@ -63,7 +63,7 @@ public class SecondActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String name = stadioArrayList.get(position).getName("name");
                         String location = stadioArrayList.get(position).getLocation("Location");
-                        String company = stadioArrayList.get(position).getLocation("company");
+                        String company = stadioArrayList.get(position).getCompany("company");
                         int size = stadioArrayList.get(position).getSize("size");
 
                         String meddelande = name + " is located in " + location + " with a size of " + size + " meters and owned by " + company;
